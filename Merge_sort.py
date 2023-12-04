@@ -31,18 +31,10 @@ data_set = []
 for i in range(1_000):
     data_set.append(random.randint(1, 1_000))
 
-start_1 = time.time()
-# print(split(data_set))
-end_1 = time.time()
-time_1 = (end_1 - start_1) * 1000
-print(time_1)
+start = time.time()
 
-start_2 = time.time()
-data_set = sorted(data_set)
-# print(data_set)
-end_2 = time.time()
-time_2 = (end_2 - start_2) * 1000
-print(time_2)
-print()
-print(time_2 - time_1, "ms")
-print("k:", int(time_2 / time_1))
+split(data_set)
+
+end = time.time()
+time = (end - start) * 1000
+print(time)
